@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="logo"><img src="./images/logo.svg" alt="" /></div>
+    <div class="container">
+      <div class="left">
+        <div class="bill">
+          <p>Bill</p>
+          <div class="control">
+            <input type="text" id="dollar" placeholder="0" />
+            <img src="./images/icon-dollar.svg" alt="" />
+          </div>
+        </div>
+        <div class="select">
+          <p>Select Tip %</p>
+          <ul>
+            <li>5%</li>
+            <li>10%</li>
+            <li>15%</li>
+            <li>25%</li>
+            <li>50%</li>
+            <li class="custom"><input type="text" placeholder="custom" /></li>
+          </ul>
+        </div>
+        <div class="people">
+          <p>Number of People</p>
+          <div class="control">
+            <small class="small">Can't be zero</small>
+            <input type="text" id="people" value="1" />
+            <img src="./images/icon-person.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="amount">
+          <p>Tip Amount<span>/ person</span></p>
+          <h1>$0.00</h1>
+        </div>
+        <div class="total">
+          <p>Total<span>/ person</span></p>
+          <h1>$0.00</h1>
+        </div>
+        <button>Reset</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

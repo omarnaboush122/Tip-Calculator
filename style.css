@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.logo {
+  min-height: 20vh;
+  text-align: center;
+}
+
+.logo img {
+  margin: 30px auto;
+}
+
+p {
+  font-size: 14px;
+  color: hsl(186, 14%, 43%);
+}
+
+.up {
+  text-align: center;
+  color: hsl(186, 14%, 43%);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  min-height: 20vh;
+  transform: translateY(50px);
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 40px;
+  height: 60vh;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.container > div {
+  flex: 1;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.left .bill {
+  margin-bottom: 40px;
+}
+
+.left .bill p {
+  margin-bottom: 5px;
+}
+.control {
+  position: relative;
+}
+
+input {
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  font-size: 24px;
+  width: 100%;
+  cursor: pointer;
+}
+input:focus {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+input::placeholder {
+  color: hsl(186, 14%, 43%);
+}
+
+.control img {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 10px;
+}
+.select {
+  margin-bottom: 40px;
+}
+.select p {
+  margin-bottom: 10px;
+}
+
+ul li {
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+ul li.active {
+  background-color: hsl(172, 67%, 45%);
+  color: #000;
+}
+
+.custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-size: 15px;
+}
+.custom input {
+  text-align: center;
+}
+.people p {
+  margin-bottom: 5px;
+}
+
+.right {
+  height: 105%;
+  border-radius: 20px;
+  padding: 40px 30px;
+  background-color: hsl(183, 100%, 15%);
+}
+
+.amount,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount {
+  margin-bottom: 30px;
+}
+.total {
+  margin-bottom: 90px;
+}
+
+.amount p,
+.total p {
+  color: hsl(189, 41%, 97%);
+}
+.amount h1,
+.total h1 {
+  color: hsl(172, 67%, 45%);
+  font-size: 35px;
+}
+
+.amount span,
+.total span {
+  display: block;
+  color: hsl(184, 14%, 56%);
+  font-size: 11px;
+}
+
+.right button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  width: 90%;
+  padding: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  background-color: hsl(183deg 55% 26% / 96%);
+  color: hsl(186deg 69% 20%);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.right button:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.control .small {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: 12px;
+  opacity: 0;
+}
+.control.error .small {
+  color: hsl(0, 100%, 74%);
+  opacity: 1;
+}
+.control.error input {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 0;
+    height: 100%;
+  }
+  .control {
+    margin-bottom: 30px;
+  }
+}
